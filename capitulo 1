@@ -2,46 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Odisea Matemática: El Origen</title>
+    <title>Odisea Matemática</title>
     <style>
-        body { font-family: 'Courier New', Courier, monospace; background: #1a1a1a; color: #00ff00; padding: 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: auto; border: 1px solid #00ff00; padding: 30px; box-shadow: 0 0 15px #00ff00; }
-        h1 { text-align: center; color: #fff; text-shadow: 2px 2px #00ff00; }
-        .reflexion { font-style: italic; color: #888; border-left: 3px solid #444; padding-left: 15px; margin: 20px 0; }
-        input { background: #000; border: 1px solid #00ff00; color: #00ff00; padding: 10px; width: 80%; margin: 10px 0; }
-        button { background: #00ff00; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #fff; }
+        body { background-color: #1a1a1a; color: #00ff00; font-family: sans-serif; padding: 40px; text-align: center; }
+        .caja { border: 2px solid #00ff00; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; }
+        button { background: #00ff00; color: black; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>CAPÍTULO 1: LA CUESTIÓN DE BASE</h1>
-        <p>Estás en el 12 de julio de 2026. Los sistemas que conoces han colapsado.</p>
-        
-        <div class="reflexion">
-            "¿Qué es importante saber para poder entender? Para que se necesitan símbolos y reglas..."
-        </div>
-
-        <p>Tienes que enviar un mensaje secreto a Almafuerte 6547, pero no puedes usar los números de siempre.</p>
-        <p><strong>RETO:</strong> Inventa un símbolo para representar la cantidad "10". ¿Cómo lo dibujarías con el teclado?</p>
-        
-        <input type="text" id="simbolo" placeholder="Ejemplo: #, @, <>, (!)">
-        <button onclick="siguiente()">Registrar Símbolo</button>
-
-        <div id="resultado" style="margin-top:20px;"></div>
+    <div class="caja">
+        <h1>ODISEA MATEMÁTICA</h1>
+        <p><i>"¿Para qué necesitamos símbolos y reglas?"</i></p>
+        <hr>
+        <p>Bienvenido, Mensajero del Tiempo. Estamos en el año 2026.</p>
+        <p>Tu primera misión es crear un código para Almafuerte 6547.</p>
+        <button onclick="alert('¡El sistema ha reconocido tu presencia! Pronto empezaremos el viaje.')">
+            INICIAR MISIÓN
+        </button>
     </div>
-
-    <script>
-        function siguiente() {
-            let s = document.getElementById('simbolo').value;
-            document.getElementById('resultado').innerHTML = `
-                <hr>
-                <p>Has decidido que <strong>${s}</strong> representa una decena.</p>
-                <p>Ahora, ¿cómo escribirías '6547' usando tu nueva lógica? Piensa en la posición...</p>
-                <input type="text" placeholder="Escribe tu código posicional">
-                <button onclick="alert('Sistema registrado. Iniciando viaje histórico...')">Enviar Mensaje</button>
-            `;
-        }
-    </script>
 </body>
 </html>
